@@ -1,6 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 
+const actions = [
+  {
+    href: '//sicksadgirls.com',
+    text: 'Shop'
+  },
+  {
+    href: 'https://youtu.be/uK8dYSbaWIs',
+    text: 'Moon Music Video'
+  },
+]
+
 const socials = [
   {
     text: 'SickSadGirls on Youtube.com',
@@ -72,6 +83,11 @@ const year = new Date().getFullYear()
       ul {
         padding: 0;
         margin: 0;
+
+        li {
+          margin-top: 2rem;
+          text-transform: uppercase;
+        }
       }
 
       a {
@@ -182,9 +198,11 @@ const year = new Date().getFullYear()
 
     <section class="main--actions">
       <ul>
-        <li>
-          <a href="http://sicksadgirls.com" target="_blank" rel="noopender noreferrer">SHOP</a>
-        </li>
+        {actions.map(({ href, text }) => (
+          <li key={href}>
+            <a href={href} target="_blank" rel="noopender noreferrer">{text}</a>
+          </li>
+        ))}
       </ul>
     </section>
 
