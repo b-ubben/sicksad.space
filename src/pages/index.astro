@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 
 const actions = [
   {
-    href: '//sicksadgirls.com',
+    href: 'http://sicksadgirls.com',
     text: 'Shop'
   },
   {
@@ -204,7 +204,7 @@ const year = new Date().getFullYear()
       <ul>
         {actions.map(({ href, text }) => (
           <li key={href}>
-            <a href={href} target="_blank" rel="noopender noreferrer">{text}</a>
+            <a href={href} target="_blank" rel="noopener noreferrer">{text}</a>
           </li>
         ))}
       </ul>
